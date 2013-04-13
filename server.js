@@ -42,30 +42,31 @@ app.get('/', function(req, res){
 app.post('/mail', function(req, res){
 
 
-	var data = {
-		remoteip:  req.connection.remoteAddress,
-		challenge: req.body.recaptcha_challenge_field,
-		response:  req.body.recaptcha_response_field
-	};
-	var recaptcha = new Recaptcha(PUBLIC_KEY, PRIVATE_KEY, data);
-
-	recaptcha.verify(function(success, error_code) {
-		if (success) {
-			res.send('Recaptcha response valid.');
-		}
-		else {
-            res.render("index.html", { captcha: recaptcha.toHTML() });
-        }
-    });
-
-
-    
-	
 	if(req.body.email && req.body.name && req.body.message) {
-		res.render('email.html',{
-			params: req.body
+
+		var data = {
+			remoteip:  req.connection.remoteAddress,
+			challenge: req.body.recaptcha_challenge_field,
+			response:  req.body.recaptcha_response_field
+		};
+		var recaptcha = new Recaptcha(PUBLIC_KEY, PRIVATE_KEY, data);
+
+		recaptcha.verify(function(success, error_code) {
+			if (success) {
+				res.render('email.html',{
+					params: req.body
+				});
+			}
+			else {
+				res.render("index.html", { 
+					captcha: recaptcha.toHTML(),
+					params: req.body
+				});
+			}
 		});
-	}
+	} else {
+		res.render("index.html");
+	}	
 	
 });
 

@@ -251,15 +251,15 @@
 						<table id="MessageForm">
 							<tr>
 								<td class="sectionStudyContent">Name</td>
-								<td><input class="formInputText" type="text" name="name"></td>
+								<td><input class="formInputText" type="text" name="name">{{ params.name }}</td>
 							</tr>
 							<tr>
 								<td class="sectionStudyContent">Company</td>
-								<td><input class="formInputText" type="text" name="company"></td>
+								<td><input class="formInputText" type="text" name="company">{{ params.company }}</td>
 							</tr>
 							<tr>
 								<td class="sectionStudyContent">Email</td>
-								<td><input class="formInputText" type="text" name="email"></td>
+								<td><input class="formInputText" type="text" name="email">{{ params.email }}</td>
 							</tr>
 						</table>
 						
@@ -270,7 +270,7 @@
 						
 						<br/>
 						
-						<textarea id="formTextArea" class="formInputText" rows="2" cols="20" name="message" placeholder="  I WANT YOU!"></textarea>
+						<textarea id="formTextArea" class="formInputText" rows="2" cols="20" name="message" placeholder="  I WANT YOU!">{{ params.message }}</textarea>
 						
 						<br/>
 						<br/>
