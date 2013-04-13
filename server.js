@@ -1,16 +1,12 @@
 var express = require('express')
 , swig = require('swig')
-, cons = require('consolidate')
-, captcha = require('captcha');
+, cons = require('consolidate');
 var app = express();
 
 
 app.configure(function(){
 
 	app.use(express.bodyParser());
-	app.use(express.cookieParser());
-	app.use(express.cookieSession({ secret: 'keyboard-cat' }));
-    app.use(captcha({ url: '/captcha.jpg', color:'#0064cd', background: 'rgb(20,30,200)' })); // captcha params
 
 	// serve static files
 	app.use("/public", express.static(__dirname + '/public'));
@@ -37,12 +33,10 @@ app.get('/', function(req, res){
 
 app.post('/mail', function(req, res){
 	
-	if(req.body.digits == req.session.captcha) {
-		if(req.body.email && req.body.name && req.body.message) {
-			res.render('email.html',{
-				params: req.body
-			});
-		}
+	if(req.body.email && req.body.name && req.body.message) {
+		res.render('email.html',{
+			params: req.body
+		});
 	}
 	
 });
