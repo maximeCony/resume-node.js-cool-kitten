@@ -277,7 +277,13 @@
 						<br/>
 						
 						<div id="formButtonSendMessage" onclick="javascript:$('#contactForm').submit()"><p id="sendButtonContent" class="sectionStudyContent">Send</p></div>
-						
+
+						<br/>
+						<br/>
+
+						{% autoescape false %}
+							{{ captcha }}
+						{% endautoescape %}
 
 					</form>
 				</div>
