@@ -317,28 +317,9 @@ a:visited {
 	line-height: 1em;
 }
 
+
 }
 
-
-.reservationForm table#form tbody tr td input,
-.reservationForm table#form tbody tr td select{
-    margin: 5px;
-}
-
-.btn {
-    background-color: white;
-    border-radius: 25px 25px 25px 25px;
-    color: #8A8683;
-    font-family: 'Open Sans',sans-serif;
-    margin: 20px 0;
-    padding: 15px 30px;
-    border: none;
-}
-
-.btn:hover {
-    background-color: #66B7F4;
-    color: white;
-}
 
 
 

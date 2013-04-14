@@ -5,8 +5,8 @@ var express = require('express')
 var app = express();
 
 
-var PUBLIC_KEY  = process.env.RECAPTCHA_PUBLIC_KEY,
-PRIVATE_KEY = process.env.RECAPTCHA_PRIVATE_KEY;
+var PUBLIC_KEY  = process.env.RECAPTCHA_PUBLIC_KEY || '6Lf7198SAAAAAL3r8tq1sCXfmneWmAcweNv2_JlW',
+PRIVATE_KEY = process.env.RECAPTCHA_PRIVATE_KEY || '6Lf7198SAAAAAEENUeuklL4S4Wwcnm8DcaetO04W';
 
 app.configure(function(){
 
@@ -35,7 +35,10 @@ app.get('/', function(req, res){
 
 	var recaptcha = new Recaptcha(PUBLIC_KEY, PRIVATE_KEY);
 	
-	res.render("index.html", { captcha: recaptcha.toHTML() });
+	res.render("index.html", { 
+		captcha: recaptcha.toHTML(),
+		params: req.body
+	});
 	
 });
 
@@ -58,9 +61,11 @@ app.post('/mail', function(req, res){
 				});
 			}
 			else {
+				res.location('/');
 				res.render("index.html", { 
 					captcha: recaptcha.toHTML(),
-					params: req.body
+					params: req.body,
+					scrollTo: 'formButtonSendMessage'
 				});
 			}
 		});
