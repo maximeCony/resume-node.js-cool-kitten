@@ -1,90 +1,99 @@
 #nav{
-        margin: 7px 0;
-    }
+    margin: 7px 0;
+}
 
-    .flexslider, .flexslider ul li{
-        border: none;
-        border-radius: 0;
-    }
+.flexslider, .flexslider ul li{
+    border: none;
+    border-radius: 0;
+}
 
-    .flex-control-nav {
-        display: none;
-    }
+.flex-control-nav {
+    display: none;
+}
 
-    #main {
-        text-align: center;
-    }
+#main {
+    text-align: center;
+}
 
-    #main h1{
-        font-size: 2.5em;
-    }
+#main h1{
+    font-size: 2.5em;
+}
 
-    #main h3{
-        margin: 0.5em 0 0;
-    }
+#main h3{
+    margin: 0.5em 0 0;
+}
 
-    .formInputText {
-        background-color: white;
-        border: 3px solid #8A8683;
-        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
-        font-size: 23px;
-        height: 36px;
-        margin-left: 11px;
-        padding-left: 5px;
-        width: 250px;
-    }
+.formInputText {
+    background-color: white;
+    border: 3px solid #8A8683;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    font-size: 23px;
+    height: 36px;
+    margin-left: 11px;
+    padding-left: 5px;
+    width: 250px;
+}
 
-    .formInputText:focus{
-        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
-        border: 3px solid #66B7F4;
-    }
+.formError input, .formError textarea {
+    border: 3px solid #D6514F;
+    color: #D6514F;
+}
 
-    
-    #formButtonSendMessage {
-        background-color: #8A8683;
-        border: 3px solid white;
-        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
-        cursor: pointer;
-        height: 46px;
-        padding-bottom: 18px;
-        padding-right: 5px;
-        text-align: center;
-        width: 194px;
-    }
+.formError p, .formError td {
+    color: #D6514F;
+}
 
-    
-    
-    #sendButtonContent {
-        color: white;
-        font-size: 39px;
-        margin: 0;
-        padding: 4px 0 0;
-        text-shadow: 0 1px 0 black;
-    }
+.labelForm
+
+.formInputText:focus{
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+    border: 3px solid #66B7F4;
+}
 
 
-    #formTextArea {
-        height: 200px;
-        min-width: 230px;
-        width: 80%;
-    }
+#formButtonSendMessage {
+    background-color: #8A8683;
+    border: 3px solid white;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    height: 46px;
+    padding-bottom: 18px;
+    padding-right: 5px;
+    text-align: center;
+    width: 194px;
+}
 
-    #messageP {
-        display: inline;
-        margin-left: 29%;
-    }
+#sendButtonContent {
+    color: white;
+    font-size: 39px;
+    margin: 0;
+    padding: 4px 0 0;
+    text-shadow: 0 1px 0 black;
+}
 
-    #studies_box {
-        text-align: center;
-    }
+#formTextArea {
+    height: 200px;
+    margin: 0;
+    padding-top: 8px;
+    width: 100%;
+}
 
-    .boxList {
-     display:inline;
-     list-style-type:none;
-     margin:2;
- }
+#messageP {
+    margin-bottom: 11px;
+    text-align: right;
+}
 
- .boxDescription {
+#studies_box {
+    text-align: center;
+}
+
+.boxList {
+   display:inline;
+   list-style-type:none;
+   margin:2;
+}
+
+.boxDescription {
     margin-bottom: -10px;
 }
 
@@ -131,4 +140,13 @@
 
 .sectionTitle {
     padding-bottom: 50px;
+}
+
+#uncle_sam {
+    margin-bottom: -50px;
+}
+
+#formErrorMessage {
+    display: none;
+    color: #D6514F;
 }

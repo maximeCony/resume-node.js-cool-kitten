@@ -12,9 +12,41 @@
 	<link rel="stylesheet" href="/public/resume.css" type="text/css" media="screen">
 	<script>
 
+	var validateForm;
 
 	$(document).ready(function() {
+
 		window.location.hash = '#{{ scrollTo }}';
+
+		var formError = function(inputName){
+			window.location.hash = inputName;
+			$(inputName).addClass("formError");
+			$('#formErrorMessage').show();
+		}
+
+		validateForm = function(){
+
+			var formValid = true;
+			
+			if($("#formTextArea").val().length == 0) {
+				formValid = false;
+				formError("#messageForm");
+			} else {
+				$("#messageForm").removeClass("formError");
+			}
+
+			if($("#inputName").val().length == 0) {
+				formValid = false;
+				formError("#nameForm");
+			} else {
+				$("#nameForm").removeClass("formError");
+			}
+
+			if(formValid) {
+				$('#formErrorMessage').hide();
+				$('#contactForm').submit();
+			}
+		}
 	});
 
 	</script>
@@ -252,9 +284,9 @@
 					<form id="contactForm" name="contact" action="/mail" method="post">
 
 						<table id="MessageForm">
-							<tr>
-								<td class="sectionStudyContent">Name</td>
-								<td><input class="formInputText" type="text" name="name" value="{{ params.name }}"></td>
+							<tr id="nameForm">
+								<td class="sectionStudyContent">Name*</td>
+								<td><input id="inputName" class="formInputText" type="text" name="name" value="{{ params.name }}"></td>
 							</tr>
 							<tr>
 								<td class="sectionStudyContent">Company</td>
@@ -269,18 +301,16 @@
 						<br/>
 						
 						<img id='uncle_sam' src="/public/images/uncle_sam.png" alt="uncle sam" />
-						<p id="messageP" class="sectionStudyContent">Message</p>
-						
-						<br/>
-						
-						<textarea id="formTextArea" class="formInputText" rows="2" cols="20" name="message" placeholder="  I WANT YOU!">{{ params.message }}</textarea>
-						
+						<div id="messageForm">
+							<p id="messageP" class="sectionStudyContent">Message*</p>
+							<textarea id="formTextArea" class="formInputText" rows="2" cols="20" name="message" placeholder="  I WANT YOU!">{{ params.message }}</textarea>
+						</div>
 						<br/>
 						<br/>
 						<br/>
 						
-						<div id="formButtonSendMessage" onclick="javascript:$('#contactForm').submit()"><p id="sendButtonContent" class="sectionStudyContent">Send</p></div>
-
+						<div id="formButtonSendMessage" onclick="javascript:validateForm()"><p id="sendButtonContent" class="sectionStudyContent">Send</p></div>
+						<p id="formErrorMessage">Some fields are mandatory.</p>
 						<br/>
 						<br/>
 
