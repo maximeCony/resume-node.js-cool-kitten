@@ -38,7 +38,6 @@ app.get('/', function(req, res){
 
 app.post('/mail', function(req, res){
 
-
 	if(req.body.name && req.body.message) {
 
 		sendgrid.send({
@@ -50,9 +49,9 @@ app.post('/mail', function(req, res){
 			if (!success) {
 				console.log(message);
 			}
-			
 		};
 
+		res.redirect('/');
 } else {
 	res.location('/');
 	res.render("index.html", { 
