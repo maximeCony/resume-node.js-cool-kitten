@@ -42,23 +42,26 @@ app.post('/mail', function(req, res){
 
 		sendgrid.send({
 			to: 'maxime.cony@gmail.com',
-			from: 'app14916551@heroku.com',
-			subject: 'Message from resume',
-			text: req.body
-		}), function(success, message) {
+			from: 'contact@maxime-cony.com',
+			subject: 'Message from your resume',
+			text: 'test'
+		}, function(success, message) {
 			if (!success) {
 				console.log(message);
+			} else {
+				console.log('Message send!');
 			}
-		};
-
+		});
+		
 		res.redirect('/');
-} else {
-	res.location('/');
-	res.render("index.html", { 
-		params: req.body,
-		scrollTo: 'formButtonSendMessage'
-	});
-}	
+
+	} else {
+		res.location('/');
+		res.render("index.html", { 
+			params: req.body,
+			scrollTo: 'formButtonSendMessage'
+		});
+	}	
 
 });
 
