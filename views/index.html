@@ -26,6 +26,7 @@
 
 		validateForm = function(){
 
+			$('#formButtonSendMessage').unbind('click');
 			var formValid = true;
 			
 			if($("#formTextArea").val().length == 0) {
@@ -45,8 +46,13 @@
 			if(formValid) {
 				$('#formErrorMessage').hide();
 				$('#contactForm').submit();
+				$('#sendButtonContent').html('Sending...');
+			} else {
+				$('#formButtonSendMessage').bind('click', validateForm);
 			}
 		}
+
+		$('#formButtonSendMessage').bind('click', validateForm);
 	});
 
 	</script>
@@ -309,7 +315,10 @@
 						<br/>
 						<br/>
 						
-						<div id="formButtonSendMessage" onclick="javascript:validateForm()"><p id="sendButtonContent" class="sectionStudyContent">Send</p></div>
+						<div id="formButtonSendMessage">
+							<p id="sendButtonContent" class="sectionStudyContent">Send</p>
+						</div>
+						
 						<p id="formErrorMessage">Some fields are mandatory.</p>
 						<br/>
 						<br/>
