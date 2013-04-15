@@ -1,6 +1,8 @@
 var express = require('express')
 , swig = require('swig')
 , cons = require('consolidate')
+,SendGrid = require('sendgrid').SendGrid
+
 var app = express();
 
 
@@ -24,8 +26,7 @@ app.configure(function(){
 });
 
 
-
-
+var sendgrid = new SendGrid(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
 app.get('/', function(req, res){
 
@@ -40,17 +41,24 @@ app.post('/mail', function(req, res){
 
 	if(req.body.name && req.body.message) {
 
-		res.render('email.html',{
-			params: req.body
+		sendgrid.send({
+			to: 'maxime.cony@gmail.com',
+			from: 'app14916551@heroku.com',
+			subject: 'Message from resume',
+			text: req.body
+		}), function(success, message) {
+			if (!success) {
+				console.log(message);
+			}
 		});
 
-	} else {
-		res.location('/');
-		res.render("index.html", { 
-			params: req.body,
-			scrollTo: 'formButtonSendMessage'
-		});
-	}	
+} else {
+	res.location('/');
+	res.render("index.html", { 
+		params: req.body,
+		scrollTo: 'formButtonSendMessage'
+	});
+}	
 
 });
 
