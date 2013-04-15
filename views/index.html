@@ -314,9 +314,7 @@
 						<br/>
 						<br/>
 
-						{% autoescape false %}
-						{{ captcha }}
-						{% endautoescape %}
+						<input type="hidden" name="_csrf" value="{{ token }}">
 
 					</form>
 				</div>
