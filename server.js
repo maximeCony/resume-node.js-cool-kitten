@@ -40,19 +40,21 @@ app.post('/mail', function(req, res){
 
 	if(req.body.name && req.body.message) {
 
-		sendgrid.send({
-			to: 'maxime.cony@gmail.com',
-			from: 'contact@maxime-cony.com',
-			subject: 'Message from your resume',
-			text: 'test'
-		}, function(success, message) {
-			if (!success) {
-				console.log(message);
-			} else {
-				console.log('Message send!');
-			}
+		app.render('email.html', { params: req.body }, function(err, html){
+			
+			sendgrid.send({
+				to: 'maxime.cony@gmail.com',
+				from: 'contact@maxime-cony.com',
+				subject: 'Message from your resume',
+				html: html
+			}, function(success, message) {
+				if (!success) {
+					console.log(message);
+				} else {
+					console.log('Message send!');
+				}
+			});
 		});
-		
 		res.redirect('/');
 
 	} else {
