@@ -50,6 +50,7 @@ app.post('/mail', function(req, res){
 			if (!success) {
 				console.log(message);
 			}
+			res.redirect('/');
 		});
 
 } else {
