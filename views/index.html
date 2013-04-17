@@ -8,51 +8,16 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 	<script type="text/javascript" src="/public/cool-kitten-master/js/scripts.min.js"></script>
-
+	
+	<script type="text/javascript" src="/public/FormManager.js"></script>
 	<link rel="stylesheet" href="/public/resume.css" type="text/css" media="screen">
-	<script>
 
-	var validateForm;
+	<script>
 
 	$(document).ready(function() {
 
-		window.location.hash = '#{{ scrollTo }}';
-
-		var formError = function(inputName){
-			window.location.hash = "#contactTitle";
-			$(inputName).addClass("formError");
-			$('#formErrorMessage').show();
-		}
-
-		validateForm = function(){
-
-			$('#formButtonSendMessage').unbind('click');
-			var formValid = true;
-			
-			if($("#formTextArea").val().length == 0) {
-				formValid = false;
-				formError("#messageForm");
-			} else {
-				$("#messageForm").removeClass("formError");
-			}
-
-			if($("#inputName").val().length == 0) {
-				formValid = false;
-				formError("#nameForm");
-			} else {
-				$("#nameForm").removeClass("formError");
-			}
-
-			if(formValid) {
-				$('#formErrorMessage').hide();
-				$('#contactForm').submit();
-				$('#sendButtonContent').html('Sending...');
-			} else {
-				$('#formButtonSendMessage').bind('click', validateForm);
-			}
-		}
-
-		$('#formButtonSendMessage').bind('click', validateForm);
+		var formManager = FormManager();
+		formManager.init();
 	});
 
 	</script>
@@ -90,8 +55,10 @@
 					<h3>415-429-9572 | <a href="mailto:maxime.cony@supinfo.com">maxime.cony@supinfo.com</a></h3>
 				</div>
 
-				<span style="font-size: 1.8em;">Hi,</span>
-				<p id="introduction">I am a French student and I came to <b class="darkerBlue">San Francisco</b> for my last year of a <b class="darkerBlue">Master's degree in IT</b>. In order to improve my experience I am currently looking for a  <b class="darkerBlue">job</b> or a <b class="darkerBlue">end-of-studies internship</b> in development.
+				<p id="introduction">My name is Maxime Cony, I am a French student and I came to <b class="darkerBlue">San Francisco</b> for my last year of a <b class="darkerBlue">Master's degree in IT</b>. 
+				<br/>
+				<br/>
+				In order to improve my experience I am currently looking for a  <b class="darkerBlue">job</b> or a <b class="darkerBlue">end-of-studies internship</b> in development.
 				</p>
 
 			</div>

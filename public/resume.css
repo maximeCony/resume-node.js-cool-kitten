@@ -117,7 +117,9 @@
 }
 
 #main {
+    border-bottom: 2px solid;
     margin-bottom: 60px;
+    padding-bottom: 30px;
 }
 
 .blue {
