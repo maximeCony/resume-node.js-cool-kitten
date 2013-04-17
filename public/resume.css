@@ -88,9 +88,9 @@
 }
 
 .boxList {
- display:inline;
- list-style-type:none;
- margin:2;
+   display:inline;
+   list-style-type:none;
+   margin:2;
 }
 
 .boxDescription {
@@ -161,4 +161,10 @@
 
 .techLogo {
     display: inline;
+}
+
+#phoneNumber {
+    text-decoration: none;
+    color: #8a8683;
+    cursor: default;
 }
