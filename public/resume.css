@@ -142,12 +142,12 @@
 }
 
 .sectionTitle {
-    padding-bottom: 50px;
-    color: #FFFFFF;
-    font-size: 3.8em;
-    font-weight: 700;
-    letter-spacing: -3px;
-    line-height: 0;
+    padding-bottom: 50px !important;
+    font-size: 3.8em !important;
+    font-weight: 700 !important;
+    letter-spacing: -3px !important;
+    line-height: 0 !important;
+    margin: 1em 0 !important;
 }
 
 #uncle_sam {
