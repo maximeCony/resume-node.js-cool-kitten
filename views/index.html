@@ -19,7 +19,7 @@
 		window.location.hash = '#{{ scrollTo }}';
 
 		var formError = function(inputName){
-			window.location.hash = inputName;
+			window.location.hash = "#contactTitle";
 			$(inputName).addClass("formError");
 			$('#formErrorMessage').show();
 		}
@@ -85,11 +85,14 @@
 			<div class="container">
 
 				<div class="grid_12" id="main">
-					<h1>Maxime Cony</h1>
+					<h1><span class="darkerBlue">{</span> Maxime Cony <span class="darkerBlue">}</span></h1>
 					<h3>1489 Webster street - 94115 - San Francisco CA</h3>
-					<h3><span style="color: #66B7F4;">415-429-9572</span> | maxime.cony@supinfo.com</h3>
+					<h3>415-429-9572 | <a href="mailto:maxime.cony@supinfo.com">maxime.cony@supinfo.com</a></h3>
 				</div>
-				<p id="introduction">My name is Maxime Cony, I am a French student and I came to San Francisco for my last year of a Master's degree in IT. In order to improve my experience I am currently looking for a end of studies internship in development.</p>
+
+				<span style="font-size: 1.8em;">Hi,</span>
+				<p id="introduction">I am a French student and I came to <b class="darkerBlue">San Francisco</b> for my last year of a <b class="darkerBlue">Master's degree in IT</b>. In order to improve my experience I am currently looking for a  <b class="darkerBlue">job</b> or a <b class="darkerBlue">end-of-studies internship</b> in development.
+				</p>
 
 			</div>
 
@@ -110,7 +113,7 @@
 					<section>
 						<h2>Web developer intern at Bsoft</h2>
 						<h4>Lyon (France) - 1st June 2012 to 1st November 2012</h4>
-						<h3 class="languages">PHP Symfony2 - Doctrine - Mysql - Twig – Bootstrap - jQuery</h3>
+						<h3 class="blue">PHP Symfony2 - Doctrine - Mysql - Twig – Bootstrap - jQuery</h3>
 						<ul>
 							<li>Build application’s (iPhone/iPad) configuration back office</li>
 							<li>Build application’s RESTful webservices</li>
@@ -124,22 +127,22 @@
 					<h2>Web developer intern at Infolegale </h2>
 					<h4>Lyon (France) - 1st July 2010 to 1st June 2012</h4>
 
-					<h3 class="languages">PHP ZEND - Smarty - Jquery - Sparkline - jqPlot - jqGrid - Mysql</h3>
+					<h3 class="blue">PHP ZEND - Smarty - Jquery - Sparkline - jqPlot - jqGrid - Mysql</h3>
 					<ul>
 						<li>Build application’s (iPhone/iPad) configuration back office</li>
 					</ul>
 
-					<h3 class="languages">PHP ZEND - jqGrid - Mysql</h3>
+					<h3 class="blue">PHP ZEND - jqGrid - Mysql</h3>
 					<ul>
 						<li>Build mini statistical consultation web site</li>
 					</ul>
 
-					<h3 class="languages">PHP ZEND - jQuery - jQueryUi - jqGrid - Mysql</h3>
+					<h3 class="blue">PHP ZEND - jQuery - jQueryUi - jqGrid - Mysql</h3>
 					<ul>
 						<li>Rebuild the original information seizure application</li>
 					</ul>
 
-					<h3 class="languages">PHP ZEND - WkHtmlToPdf - jQueryUi – Raphael - Highcharts – Mysql</h3>
+					<h3 class="blue">PHP ZEND - WkHtmlToPdf - jQueryUi – Raphael - Highcharts – Mysql</h3>
 					<p>Build reporting tool with:</p>
 					<ul>
 						<li>Table</li>
@@ -189,7 +192,7 @@
 
 				<section class="personalProject">
 					<h2>RemotePad</h2>
-					<h3 class="languagesDarker">Android - Java - PHP Symfony2 - Doctrine - Mysql - Twig – Bootstrap – jQuery</h3>
+					<h3 class="darkerBlue">Android - Java - PHP Symfony2 - Doctrine - Mysql - Twig – Bootstrap – jQuery</h3>
 					<ul>
 						<li>Android application emulating a touchpad and remotes over WIFI (udp)</li>
 						<li>Website with remote creator</li>
@@ -198,7 +201,7 @@
 
 				<section class="personalProject">
 					<h2>YouFood (School - Project manager)</h2>
-					<h3 class="languagesDarker">Android - Java - PHP Symfony2 - Doctrine - Mysql - Twig – Bootstrap – jQuery</h3>
+					<h3 class="darkerBlue">Android - Java - PHP Symfony2 - Doctrine - Mysql - Twig – Bootstrap – jQuery</h3>
 					<h4>Restaurant management application</h4>
 					<ul>
 						<li>Android application for waiters and customers</li>
@@ -208,7 +211,7 @@
 
 				<section class="personalProject">
 					<h2>AutoSup (School - Project manager)</h2>
-					<h3 class="languagesDarker">PHP ZEND - jQuery - jQueryUi – Mysql</h3>
+					<h3 class="darkerBlue">PHP ZEND - jQuery - jQueryUi – Mysql</h3>
 					<h4>Driving school management website (planning, car reservation)</h4>
 					<ul>
 						<li>Planning management</li>
@@ -241,7 +244,7 @@
 						<div class="grid_4" id="what">
 							<p><img src="/public/images/language.png"></p>
 							<p class="boxDescription"><span>Languages</span></p>
-							<ul class="boxList languages">
+							<ul class="boxList blue">
 								<li>Node.js (Express)</li>
 								<li>PHP (Symfony2 - Zend)</li>
 								<li>Javascript (jQuery - Backbone)</li>
@@ -252,7 +255,7 @@
 						<div class="grid_4" id="what">
 							<p><img src="/public/images/database.png"></p>
 							<p class="boxDescription"><span>Database</span></p>
-							<ul class="boxList languages">
+							<ul class="boxList blue">
 								<li>Mysql</li>
 								<li>MongoDB</li>
 							</ul>
@@ -260,7 +263,7 @@
 						<div class="grid_4 omega" id="what">
 							<p><img src="/public/images/management.png"></p>
 							<p class="boxDescription"><span>Other</span></p>
-							<ul class="boxList languages">
+							<ul class="boxList blue">
 								<li>Management</li>
 								<li>Law</li>
 								<li>Business Intelligence</li>

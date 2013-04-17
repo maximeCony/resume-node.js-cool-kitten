@@ -112,18 +112,19 @@
 #introduction {
     font-size: 1.2em;
     margin: auto;
-    max-width: 800px;
+    max-width: 794px;
+    text-align: justify;
 }
 
 #main {
     margin-bottom: 60px;
 }
 
-.languages {
+.blue {
     color: #A9D3D0;
 }
 
-.languagesDarker {
+.darkerBlue {
     color: #66B7F4;
 }
 
