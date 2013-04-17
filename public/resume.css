@@ -88,9 +88,9 @@
 }
 
 .boxList {
-   display:inline;
-   list-style-type:none;
-   margin:2;
+ display:inline;
+ list-style-type:none;
+ margin:2;
 }
 
 .boxDescription {
@@ -143,6 +143,11 @@
 
 .sectionTitle {
     padding-bottom: 50px;
+    color: #FFFFFF;
+    font-size: 3.8em;
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: 0;
 }
 
 #uncle_sam {
