@@ -101,10 +101,6 @@
     margin-bottom: 100px;
 }
 
-#internInfolegale section ul li {
-    margin-bottom: 10px;
-}
-
 .personalProject {
     margin-bottom: 70px;
 }
@@ -171,4 +167,17 @@
 
 .internshipsDescription{
     padding-left: 20px;
+}
+
+.missions {
+    margin-top: 5px;
+}
+
+#reportingTools {
+    margin-bottom: 10px !important;
+    margin-top: 7px !important;
+}
+
+#reportingToolSection {
+    margin-left: 22px;
 }
