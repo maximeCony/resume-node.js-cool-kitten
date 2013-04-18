@@ -56,9 +56,17 @@
 			<div class="container">
 
 				<div class="grid_12" id="main">
-					<h1><span class="darkerBlue">{</span> Maxime Cony <span class="darkerBlue">}</span></h1>
+					<h1>
+						<span class="darkerBlue">{</span> Maxime Cony <span class="darkerBlue">}</span>
+					</h1>
+					<a title="Github account" href="https://github.com/maximeCony" target="_blank">
+							<img src="/public/images/GitHub-Mark-32px.png" alt="Github logo" />
+					</a>
 					<h3>1489 Webster street - 94115 - San Francisco CA</h3>
-					<h3><a href="tel:4154299572"> 415-429-9572 </a> | <a title="mail" href="mailto:maxime.cony@gmail.com">maxime.cony@gmail.com</a></h3>
+					<h3> 
+						<a href="tel:4154299572"> 415-429-9572 </a> | 
+						<a title="mail" href="mailto:maxime.cony@gmail.com">maxime.cony@gmail.com</a>
+					</h3>
 				</div>
 
 				<p id="introduction">My name is Maxime Cony, I am a French student and I came to <b class="darkerBlue">San Francisco</b> for my last year of a <b class="darkerBlue">Master's degree in IT</b>. 
@@ -287,21 +295,21 @@
 								<td><input class="formInputText" type="text" name="email" value="{{ params.email }}"></td>
 							</tr>
 						</table>
-						
+
 						<br/>
-						
+
 						<img id='uncle_sam' src="/public/images/uncle_sam.png" alt="uncle sam" />
 						<div id="messageForm">
 							<p id="messageP" class="sectionStudyContent">Message*</p>
 							<textarea id="formTextArea" class="formInputText" rows="2" cols="20" name="message" placeholder="  I WANT YOU!">{{ params.message }}</textarea>
 						</div>
-						
+
 						<br/>
-						
+
 						<div id="formButtonSendMessage">
 							<p id="sendButtonContent" class="sectionStudyContent">Send</p>
 						</div>
-						
+
 						<p id="formErrorMessage">Some fields are mandatory.</p>
 
 					</form>
