@@ -181,3 +181,11 @@
 #reportingToolSection {
     margin-left: 22px;
 }
+
+a#linkToMain {
+    color: #8A8683;
+}
+
+a#linkToMain:hover {
+    color: #B2AEAB;
+}
