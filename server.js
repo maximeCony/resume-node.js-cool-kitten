@@ -14,6 +14,8 @@ app.configure(function(){
 	//used to parse forms
 	app.use(express.bodyParser());
 
+	app.use(app.router);
+
 	// serve static files
 	app.use("/public", express.static(__dirname + '/public'));
 
@@ -78,8 +80,14 @@ app.post('/mail', function(req, res){
 
 });
 
+// 404 Page
+app.use(function(req, res){
+    res.status(404);
+    res.render("404.html");
+});
+
 //start listening
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 app.listen(port, function() {
 	console.log("Listening on " + port);
 });

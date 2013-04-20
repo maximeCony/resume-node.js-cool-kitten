@@ -32,7 +32,7 @@ jQuery(document).ready(function ($) {
 
     function goToByScroll(dataslide) {
         htmlbody.animate({
-            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top + 10
+            scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top + 1
         }, 2000, 'easeInOutQuint');
     }
 
