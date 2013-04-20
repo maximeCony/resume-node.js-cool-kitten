@@ -14,8 +14,6 @@ app.configure(function(){
 	//used to parse forms
 	app.use(express.bodyParser());
 
-	app.use(app.router);
-
 	// serve static files
 	app.use("/public", express.static(__dirname + '/public'));
 
