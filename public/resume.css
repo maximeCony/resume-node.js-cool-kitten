@@ -124,6 +124,7 @@
 
 .darkerBlue {
     color: #66B7F4;
+    margin-top: 0;
 }
 
 #contactTitle{
@@ -192,4 +193,12 @@ a#linkToMain:hover {
 
 .linkTitle {
     color: #8A8683 !important;
+}
+
+.projectTitle {
+    line-height: 0 !important;
+}
+
+section.internships section h4, section.internships h4 {
+    margin: 0;
 }
