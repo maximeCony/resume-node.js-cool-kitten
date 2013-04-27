@@ -189,3 +189,7 @@ a#linkToMain {
 a#linkToMain:hover {
     color: #B2AEAB;
 }
+
+.linkTitle {
+    color: #8A8683 !important;
+}
