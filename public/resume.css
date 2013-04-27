@@ -193,3 +193,7 @@ a#linkToMain:hover {
 .linkTitle {
     color: #8A8683 !important;
 }
+
+.navigation li {
+    width: 25%;
+}
