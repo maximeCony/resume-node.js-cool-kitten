@@ -202,3 +202,7 @@ a#linkToMain:hover {
 section.internships section h4, section.internships h4 {
     margin: 0;
 }
+
+#slide5 {
+    padding-bottom: 0;
+}
