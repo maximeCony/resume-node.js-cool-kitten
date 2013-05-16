@@ -195,6 +195,10 @@ a#linkToMain:hover {
     color: #8A8683 !important;
 }
 
+.linkTitle:hover {
+    color: #BFBAB7 !important;
+}
+
 .projectTitle {
     line-height: 0 !important;
 }
