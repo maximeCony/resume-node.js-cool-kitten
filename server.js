@@ -15,7 +15,7 @@ app.configure(function(){
 	app.use(express.bodyParser());
 
 	// serve static files
-	app.use("/public", express.static(__dirname + '/public'));
+	app.use("/", express.static(__dirname + '/public'));
 
 	//set swig as view engine
 	app.engine('.html', cons.swig);
