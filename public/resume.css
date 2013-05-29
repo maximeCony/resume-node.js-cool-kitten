@@ -192,11 +192,12 @@ a#linkToMain:hover {
 }
 
 .linkTitle {
-    color: #8A8683 !important;
+    color: #66B7F4 !important;
+    font-size: 0.5em !important;
 }
 
 .linkTitle:hover {
-    color: #BFBAB7 !important;
+    color: #a9d3d0 !important;
 }
 
 .projectTitle {
