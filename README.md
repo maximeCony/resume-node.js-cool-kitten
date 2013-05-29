@@ -1,4 +1,4 @@
 resume-node.js-cool-kitten
 ==========================
 
-My online resume
+My online resume which you can find [here](http://maxime-cony.com/).
