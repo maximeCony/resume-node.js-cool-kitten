@@ -21,6 +21,9 @@
 
 #main {
     text-align: center;
+    /*border-bottom: 1px solid;*/
+    margin-bottom: 60px;
+    padding-bottom: 50px;
 }
 
 #main h1{
@@ -118,12 +121,6 @@
     margin: auto;
     max-width: 794px;
     text-align: justify;
-}
-
-#main {
-    border-bottom: 1px solid;
-    margin-bottom: 60px;
-    padding-bottom: 50px;
 }
 
 .blue {

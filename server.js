@@ -36,7 +36,6 @@ app.get('/', function(req, res){
 	res.render("index.html", { 
 		params: req.body
 	});
-	
 });
 
 //post mail (on form submit)
